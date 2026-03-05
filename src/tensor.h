@@ -5,10 +5,9 @@
 class Tensor
 {
 public:
-    float *d_ptr;
-    float rank;
-    std::vector<int> shape;
-    size_t total_elements;
+    float *d_ptr;           // Pointer to the memory ON the GPU
+    std::vector<int> shape; // e.g., {1, 784}
+    size_t total_elements;  // Total count (1 * 784 = 784)
 
     Tensor(std::vector<int> s) : shape(s)
     {
